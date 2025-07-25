@@ -26,6 +26,9 @@ public class ObreroService {
     public ObreroRepository obreroRepository;
 
     public List<Obrero> getAll() {
+        
+        
+        
         return obreroRepository.findAll();
     }
     

@@ -7,13 +7,18 @@ import jakarta.persistence.*;
 
 @Entity
 public class Obrero {
+    
+    public Obrero() {
+    } 
+    
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String nombre;
     private String apellido;
-
+    private int area;
     public String getNombre() {
         return nombre;
     }
@@ -25,7 +30,7 @@ public class Obrero {
     public int getArea() {
         return area;
     }
-
+    
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -37,8 +42,11 @@ public class Obrero {
     public void setArea(int area) {
         this.area = area;
     }
-    private int area;
-
-
+    
+    
     // Getters & Setters
+
+    public Long getId() {
+        return id;
+    }
 }
